@@ -54,6 +54,12 @@ classDiagram
         +update(String) void
     }
 
+    class Main {
+        +main(String[] args) void$
+    }
+
     NewsAgency o-- Subscriber
     Subscriber <|.. NewsSubscriber
+    Main ..> NewsAgency : uses
+    Main ..> NewsSubscriber : creates
 ```
